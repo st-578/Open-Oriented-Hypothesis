@@ -1,1 +1,28 @@
+kpis:
+  - name: 開発途上国AIアクセス格差
+    definition: 低所得国（GDP/capita <$5,000）の人口1人あたり生成AIツール月間利用時間（分/人）
+    current: 42
+    predicted: 180
+    reality: 8
+    unit: 分/人
 
+  - name: 一般人の生活の質向上
+    definition: World Happiness Report平均スコア変化率＋所得中央値実質成長率の複合指数
+    current: 0.03
+    predicted: 0.45
+    reality: 0.07
+    unit: 複合指数
+
+  - name: 存在リスク発生確率
+    definition: Metaculus集計による生成AI関連カタストロフィックイベント確率（%/年）
+    current: 0.8
+    predicted: 0.2
+    reality: null
+    unit: %
+
+  - name: 経済全体の生産性
+    definition: グローバル労働生産性成長率（実質GDP/労働時間、% per year）
+    current: 1.9
+    predicted: 3.2
+    reality: 2.1
+    unit: %/year

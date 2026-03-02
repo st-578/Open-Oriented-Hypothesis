@@ -33,19 +33,19 @@
     new Chart(document.getElementById('waveChart'), {
       type: 'line',
       data: {
-        labels: ['現在', '3ヶ月後', '6ヶ月後', '9ヶ月後', '1年後'],
+        labels: ['現在', '1ヶ月', '2ヶ月', '3ヶ月', '4ヶ月', '5ヶ月', '6ヶ月', '7ヶ月', '8ヶ月', '9ヶ月', '10ヶ月', '11ヶ月', '1年後'],
         datasets: [{
           label: '帰無仮説（変わらない）',
-          data: [0, 0, 0, 0, 0],
+          data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
           borderColor: '#ff5555',
           borderWidth: 4,
-          tension: 0.1
+          tension: 0.4
         }, {
           label: '法案側予測',
-          data: [8, 22, 38, 52, 68],
+          data: [5, 12, 18, 25, 32, 38, 45, 51, 57, 62, 66, 69, 72],
           borderColor: '#58a6ff',
           borderWidth: 4,
-          tension: 0.3
+          tension: 0.35
         }]
       },
       options: { 

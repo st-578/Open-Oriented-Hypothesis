@@ -5,20 +5,29 @@
   <title>Open-Oriented-Hypothesis</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
-    body { font-family: system-ui; background:#0d1117; color:#c9d1d9; margin:40px; }
+    body { font-family: system-ui; background:#0d1117; color:#c9d1d9; margin:40px; line-height:1.6; }
     h1 { color:#58a6ff; }
-    canvas { background:#161b22; padding:20px; border-radius:8px; }
+    canvas { background:#161b22; padding:20px; border-radius:12px; }
+    ul { list-style:none; padding:0; }
+    li { margin:12px 0; }
+    a { color:#58a6ff; text-decoration:none; }
+    a:hover { text-decoration:underline; }
   </style>
 </head>
 <body>
   <h1>🛠️ Open-Oriented-Hypothesis</h1>
   <p>閉じてない仮説の鍛冶場 — 誰でも参加できる検証プラットフォーム</p>
-  
-  <h2>現在の検証状況（株価チャート波）</h2>
-  <canvas id="waveChart" width="800" height="300"></canvas>
 
-  <p><a href="https://github.com/st-578/Open-Oriented-Hypothesis/tree/main/templates">テンプレート一覧へ</a></p>
-  <p>フォークして参加待機中！</p>
+  <h2>現在の検証状況（株価チャート波）</h2>
+  <canvas id="waveChart" width="900" height="350"></canvas>
+
+  <h2>テンプレート一覧</h2>
+  <ul>
+    <li>📁 <a href="https://github.com/st-578/Open-Oriented-Hypothesis/tree/main/templates/base">base（汎用テンプレート）</a></li>
+    <li>📁 <a href="https://github.com/st-578/Open-Oriented-Hypothesis/tree/main/templates/domains/law/international/un-ai-governance">UN国際生成AIガバナンス（現在進行中）</a></li>
+  </ul>
+
+  <p><strong>フォークして参加待機中！</strong> PR大歓迎です。</p>
 
   <script>
     new Chart(document.getElementById('waveChart'), {
@@ -29,15 +38,20 @@
           label: '帰無仮説（変わらない）',
           data: [0, 0, 0, 0, 0],
           borderColor: '#ff5555',
-          tension: 0.4
+          borderWidth: 4,
+          tension: 0.1
         }, {
           label: '法案側予測',
-          data: [10, 25, 40, 55, 70],
+          data: [8, 22, 38, 52, 68],
           borderColor: '#58a6ff',
-          tension: 0.4
+          borderWidth: 4,
+          tension: 0.3
         }]
       },
-      options: { scales: { y: { beginAtZero: true } } }
+      options: { 
+        scales: { y: { beginAtZero: true } },
+        plugins: { legend: { position: 'top' } }
+      }
     });
   </script>
 </body>
